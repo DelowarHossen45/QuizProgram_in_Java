@@ -10,28 +10,21 @@ public class TicketSeller {
 
         int tickets = TICKET_COUNT;
         int buyers = 0;
-
-        System.out.println(tickets + " tickets will be sold.");
-
         while(tickets > 0) {
-            System.out.println("How many tickets would you like to buy?");
-
             int count = in.nextInt();
 
             if(count < 0 || count > TICKET_MAX_PER_USER) {
-                System.out.println("You can only buy up to " + TICKET_MAX_PER_USER + " tickets.");
                 continue;
             }
 
             if(count == 0) {
-                System.out.println("You don't want to buy any tickets, bye!\n");
                 continue;
             }
 
-            if(tickets < count) {
-                System.out.println("There are only " + tickets + " ticket(s) left.");
-                continue;
-            }
+//            if(tickets < count) {
+//                System.out.println("There are only " + tickets + " ticket(s) left.");
+//                continue;
+        //    }
 
             tickets -= count;
             buyers++;
